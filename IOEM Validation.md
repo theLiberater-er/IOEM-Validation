@@ -1,22 +1,18 @@
-IOEM Validation Effort
-Objective:
+<h1 align= center>IOEM Validation Effort</h1>
+<h2>Objective</h2>
 To automate the process of validating the information associated with the ~220 ticket queues that are specified in the Incident Ownership and Escalation Matrix, and the contact points for those groups. Contact points in this effort included Prime Shift contact, Secondary contact, After Hours contact, and the 1st-4th escalation contacts. 
-Tools of this trade:
-I decided to use four products/services for this effort: Power Automate, Outlook, Forms, and SharePoint (all Microsoft products). 
-•	SharePoint houses a list that contains one item for each aforementioned workload (~220 total) and provides a platform to be able to add/configure “views” in SharePoint (SP). Views are just ways to see data, a lot like filtering and sorting. Technically, the list was created by Microsoft Lists (another application), but I omitted that from this document for the purpose of simplicity, since SP shows and provides everything you need. 
-•	Power Automate is the tool that carries out the actions of manipulating the data from SP, Outlook, Forms, and the list of O365 users. This manipulation allows the flow (series of actions with an end result) to send out emails to one individual for each workload, about 180 emails or so (multiple buckets are owned by the same management chain). In this effort, PA performs two flows
-•	Outlook is merely a vessel used to ship the emails that PA generates. It is controlled and manipulated by PA in our case.
-•	Forms is the tool used to aid the effort with all the workloads that were omitted from the initial rollout of emails. It was designed for more control throughout the process. It contains one question, which asks for a bucket name to send an email off for, and that kickstarts the second flow in this effort. 
-
-
-
-
-
-
-
-User Flow:
-The user will get an email notifying them of the effort, instructions/expectations and a link to their assigned item:
-
+<h2>Tools of this trade</h2>
+<p>I decided to use four products/services for this effort: Power Automate, Outlook, Forms, and SharePoint (all Microsoft products).</p>
+<ul>
+ <li>SharePoint houses a list that contains one item for each aforementioned workload (~220 total) and provides a platform to be able to add/configure “views” in SharePoint (SP). Views are just ways to see data, a lot like filtering and sorting. Technically, the list was created by Microsoft Lists (another application), but I omitted that from this document for the purpose of simplicity, since SP shows and provides everything you need.</li>
+ <li>Power Automate is the tool that carries out the actions of manipulating the data from SP, Outlook, Forms, and the list of O365 users. This manipulation allows the flow (series of actions with an end result) to send out emails to one individual for each workload, about 180 emails or so (multiple buckets are owned by the same management chain). In this effort, PA performs two flows</li>
+ <li>Outlook is merely a vessel used to ship the emails that PA generates. It is controlled and manipulated by PA in our case.</li>
+ <li>Forms is the tool used to aid the effort with all the workloads that were omitted from the initial rollout of emails. It was designed for more control throughout the process. It contains one question, which asks for a bucket name to send an email off for, and that kickstarts the second flow in this effort. 
+</li> 
+</ul>
+<h2>User Flow</h2>
+<p>The user will get an email notifying them of the effort, instructions/expectations and a link to their assigned item:</p>
+<img src="" alt="user_email">
  
 
 The users will click on the link and will see the following editable fields:
@@ -79,6 +75,9 @@ Below is the flowchart used to design the second flow in this effort, which was 
 
  
 This flow is designed to send an email to the assignee of the bucket name that is submitted via a Form:
+
+
+</body>
 
  
 
