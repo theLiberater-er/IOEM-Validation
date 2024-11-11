@@ -23,7 +23,7 @@ To automate the process of validating the information associated with the ~220 t
 <h2>Process Flow</h2>
 <p>The process flow for this will start with PA and all the data it needs to perform the first (and primary) flow. A list is created beforehand to house all the data. I titled mine IOEM Validation and housed it in the Incident Management SP page.</p> 
 <p>All PA flows must have some sort of trigger to execute the actions that follow, so I used the ‘Manually trigger a flow’ trigger, which allows me to kick off the flow at the click of a button. The next action, ‘List rows present in a table’, grabs all the rows (and the data in those rows) from a copy of a recently updated IOEM, and stores it, allowing for retrieval of that data by any other action(s). I then initialize two variables, ‘Invalid Buckets’ and ‘Put Emails in Array’, seen below:</p>
-<img src="" alt="bottom_half_of_flow">
+<img src="https://github.com/theLiberater-er/PowerPlatform/blob/5d2bb48420883a4ddc4e385f0b8ea57d49142467/Assets/IOEM%20Validation/primary_flow_1.png" alt="top_half_of_flow">
 <p>‘Invalid Buckets’ is an array variable that will hold the names of buckets that pass either one of the conditions coded in for the Conditional action. This variable did not have any initial value added to it during its creation. ‘Put Emails in Array’ was not set with an initial value and was designed to take all known emails with each user and put them in an array for filtering later in the flow.</p> 
 <p>An ‘Apply to each’ action is automatically added to the rest of the flow. This is due to the next action (‘Get a row’) referencing all the rows in the ‘List rows present in a table’ action. This gets every row in the spreadsheet and has the data in those rows ready to go. While this action and the ‘List rows present in a table’ action seem to do the same thing, they do not. The next action, a Conditional, is an “If” statement, with the following conditions:</p> 
 <ul>
@@ -31,7 +31,7 @@ To automate the process of validating the information associated with the ~220 t
 <li>If the [value of the] first escalation contact exceeds 20 characters in length, then the flow will add the bucket name to the ‘Invalid Buckets’ variable.</li> 
 </ul>
 <p>The two actions under ‘True’ are what adds the bucket names to the ‘Invalid Buckets’ variable and displays them for me to make sure those look right. If the row passes as false in the conditional, then it will make a SP item, assign it, and send an email to the assignee notifying them of this validation effort, provides them with instructions, and a link to access the item on SP.</p> 
-<img src="https://github.com/theLiberater-er/PowerPlatform/blob/795c41fb8f1b022989a987cde8f7f516ee6aba60/Assets/IOEM%20Validation/ioem%20write-up12.png" alt="dashboard_view">
+<img src="" alt="bottom_half_of_flow">
 <p>It is also worth noting that during the rollout, it was discovered that any assignee will need to be added to a SP group with Edit or Contribute access to this List within the IMS SP site.</p> 
 <h2>SharePoint Group</h2>
 <p>Navigate to the Project Management page and click See All:</p>
