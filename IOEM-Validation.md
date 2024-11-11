@@ -12,7 +12,7 @@ To automate the process of validating the information associated with the ~220 t
 </ul>
 <h2>User Flow</h2>
 <p>The user will get an email notifying them of the effort, instructions/expectations and a link to their assigned item:</p>
-<img src="https://github.com/theLiberater-er/PowerPlatform/blob/4855d0c5e895db8e0dd8967a0abe5e15b2696d4e/Assets/IOEM%20Validation/user_email.jpg" alt="user_email">
+<img src="https://theliberater-er.github.io/PowerPlatform/Assets/user_email.jpg" alt="user_email">
 <p>The users will click on the link and will see the following editable fields:</p>
 <img src="https://github.com/theLiberater-er/PowerPlatform/blob/b54434c160d2e63a7b382e39c876aeb4d465e203/Assets/IOEM%20Validation/IOEM%20write-up11.png" alt="item_view"> 
 <p>The Workload Description field provides instructions on how to proceed for the user, and what fields to fill out, and what is expected from each field based off the circumstances surrounding that workload. In a perfect world, every item will look like this:</p>
