@@ -16,14 +16,14 @@ To automate the process of validating the information associated with the ~220 t
 <p>The users will click on the link and will see the following editable fields:</p>
 <img src="https://github.com/theLiberater-er/PowerPlatform/blob/b54434c160d2e63a7b382e39c876aeb4d465e203/Assets/IOEM%20Validation/IOEM%20write-up11.png" alt="item_view"> 
 <p>The Workload Description field provides instructions on how to proceed for the user, and what fields to fill out, and what is expected from each field based off the circumstances surrounding that workload. In a perfect world, every item will look like this:</p>
-<img src="" alt="item_view">
+<img src="https://github.com/theLiberater-er/PowerPlatform/blob/b92ecb3050aea09e44f27e6786dcc3be36cc62e9/Assets/IOEM%20Validation/IOEM%20write-up2.png" alt="item_view">
 <p>The below image is how IMS can view the status of each item in this list to ensure things are moving forward to 100% validation:</p>
-<img src="https://github.com/theLiberater-er/PowerPlatform/blob/70c541a64b9e07f6beda274384ab21cc9c918a99/Assets/IOEM%20Validation/primary_flow_1.png" alt="top_half_of_primary_flow">
+<img src="https://github.com/theLiberater-er/PowerPlatform/blob/70c541a64b9e07f6beda274384ab21cc9c918a99/Assets/IOEM%20Validation/IOEM%20write-up3.png" alt="top_half_of_primary_flow">
 <p>It displays all the information needed for IMS to keep track of the effort and allows us to reach out to any assignees who are falling behind on their task.</p> 
 <h2>Process Flow</h2>
 <p>The process flow for this will start with PA and all the data it needs to perform the first (and primary) flow. A list is created beforehand to house all the data. I titled mine IOEM Validation and housed it in the Incident Management SP page.</p> 
 <p>All PA flows must have some sort of trigger to execute the actions that follow, so I used the ‘Manually trigger a flow’ trigger, which allows me to kick off the flow at the click of a button. The next action, ‘List rows present in a table’, grabs all the rows (and the data in those rows) from a copy of a recently updated IOEM, and stores it, allowing for retrieval of that data by any other action(s). I then initialize two variables, ‘Invalid Buckets’ and ‘Put Emails in Array’, seen below:</p>
-<img src="https://github.com/theLiberater-er/PowerPlatform/blob/480c387fa23750a43d812d330b756b9eec558ef1/Assets/IOEM%20Validation/primary_flow.png" alt="bottom_half_of_flow">
+<img src="" alt="bottom_half_of_flow">
 <p>‘Invalid Buckets’ is an array variable that will hold the names of buckets that pass either one of the conditions coded in for the Conditional action. This variable did not have any initial value added to it during its creation. ‘Put Emails in Array’ was not set with an initial value and was designed to take all known emails with each user and put them in an array for filtering later in the flow.</p> 
 <p>An ‘Apply to each’ action is automatically added to the rest of the flow. This is due to the next action (‘Get a row’) referencing all the rows in the ‘List rows present in a table’ action. This gets every row in the spreadsheet and has the data in those rows ready to go. While this action and the ‘List rows present in a table’ action seem to do the same thing, they do not. The next action, a Conditional, is an “If” statement, with the following conditions:</p> 
 <ul>
