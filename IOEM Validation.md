@@ -31,12 +31,13 @@ To automate the process of validating the information associated with the ~220 t
 <li>If the [value of the] first escalation contact exceeds 20 characters in length, then the flow will add the bucket name to the ‘Invalid Buckets’ variable.</li> 
 </ul>
 <p>The two actions under ‘True’ are what adds the bucket names to the ‘Invalid Buckets’ variable and displays them for me to make sure those look right. If the row passes as false in the conditional, then it will make a SP item, assign it, and send an email to the assignee notifying them of this validation effort, provides them with instructions, and a link to access the item on SP.</p> 
-<img src="" alt="bottom_half_of_flow">
+<img src="https://github.com/theLiberater-er/PowerPlatform/blob/3fbca73b62eca39f5ce01adeb491d132970b79f9/Assets/IOEM%20Validation/primary_flow.png" alt="bottom_half_of_flow">
 <p>It is also worth noting that during the rollout, it was discovered that any assignee will need to be added to a SP group with Edit or Contribute access to this List within the IMS SP site.</p> 
 <h2>SharePoint Group</h2>
 <p>Navigate to the Project Management page and click See All:</p>
-<img src="https://github.com/theLiberater-er/PowerPlatform/blob/795c41fb8f1b022989a987cde8f7f516ee6aba60/Assets/IOEM%20Validation/ioem%20write-up13.png" alt="list_view">
-<p>Then click the cog, List settings, then Permissions for this list:</p>          
+<img src="" alt="">
+<p>Then click the cog, List settings, then Permissions for this list:</p>   
+<img src="https://github.com/theLiberater-er/PowerPlatform/blob/795c41fb8f1b022989a987cde8f7f516ee6aba60/Assets/IOEM%20Validation/ioem%20write-up13.png" alt="list_view"><br>
 <img src="https://github.com/theLiberater-er/PowerPlatform/blob/795c41fb8f1b022989a987cde8f7f516ee6aba60/Assets/IOEM%20Validation/IOEM%20write-up14.png" alt="sp_group_settings">
 <p>In the image below, click on the IOEM Validation Group. You can also check the permissions of a specific user to aid in troubleshooting, if applicable, by selecting Check Permissions.</p> 
 <img src="https://github.com/theLiberater-er/PowerPlatform/blob/795c41fb8f1b022989a987cde8f7f516ee6aba60/Assets/IOEM%20Validation/IOEM%20write-up15.png" alt="navigating_to_group">"
