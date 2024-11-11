@@ -12,10 +12,9 @@ To automate the process of validating the information associated with the ~220 t
 </ul>
 <h2>User Flow</h2>
 <p>The user will get an email notifying them of the effort, instructions/expectations and a link to their assigned item:</p>
-<img src="" alt="user_email">
- 
-
-The users will click on the link and will see the following editable fields:
+<img src="https://github.com/theLiberater-er/PowerPlatform/blob/4855d0c5e895db8e0dd8967a0abe5e15b2696d4e/Assets/IOEM%20Validation/user_email.jpg" alt="user_email">
+<p>The users will click on the link and will see the following editable fields:</p>
+<img src="" alt=""> 
 
  
 
